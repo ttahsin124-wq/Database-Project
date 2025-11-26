@@ -4,8 +4,6 @@ import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
 import mysql.connector
 
-
-
 def get_db():
     try:
         conn = mysql.connector.connect(
@@ -16,14 +14,14 @@ def get_db():
         )
         return conn
     except mysql.connector.Error as e:
-        messagebox.showerror("Database Error", f"Could not connect to MySQL:\n{e}")
+        messagebox.showerror("Database Error", f"Could not connect to MySQL:\n{e}")    
         return None
 
 
 
 class NewsBlogApp(ttk.Window):
     def __init__(self):
-        super().__init__(themename="superhero")
+        super().__init__(themename="cyborg")
         self.title("News Blog Management System")
         self.geometry("1200x700")
 
@@ -52,7 +50,15 @@ class NewsBlogApp(ttk.Window):
     
     def create_header(self):
         self.header = ttk.Frame(self, padding=10)
-        self.header.pack(fill=X)
+        self.header.pack(fill=tk.X)
+        self.title_label = tk.Label(
+        self.header,
+        text="News Blog Management System",
+        font=("Arial", 22, "bold"),
+        fg="white",
+        bg="#001330"   # navy blue
+    )
+        self.title_label.pack(fill=tk.X, pady=5)
 
    
     def create_content(self):
@@ -63,7 +69,10 @@ class NewsBlogApp(ttk.Window):
         for w in self.content.winfo_children():
             w.destroy()
         for w in self.header.winfo_children():
-            w.destroy()
+            if w is not self.title_label:
+             w.destroy()
+    
+
     def sort_treeview(self,tree,col,reverse):
         for c in tree["columns"]:
             text=c.title()
@@ -159,7 +168,28 @@ class NewsBlogApp(ttk.Window):
           tree.column(col, width=180)
 
       for row in news_list:
-        tree.insert("", END, values=row)
+          tree.insert("", END, values=row)
+      def show_full_news(event):
+           selected_item=tree.focus()
+           if not selected_item:
+                return
+           news_id=tree.item(selected_item,"values")[0]
+           conn2=get_db()
+           cur2=conn2.cursor()
+           cur2.execute("SELECT title, body FROM news WHERE news_id=%s", (news_id,))
+           news=cur2.fetchone()
+           conn2.close()
+           if news:
+               full_modal=tk.Toplevel(modal)
+               full_modal.title(news[0])
+               full_modal.geometry("500x400")
+               full_modal.grab_set()
+               ttk.Label(full_modal, text=news[0], font=("Arial", 14, "bold")).pack(pady=5)
+               body_text = tk.Text(full_modal, wrap="word")
+               body_text.pack(fill=BOTH, expand=True, padx=10, pady=10)
+               body_text.insert("1.0", news[1])
+               body_text.config(state="disabled")
+      tree.bind("<Double-1>",show_full_news)
 
 
     def load_users(self):
