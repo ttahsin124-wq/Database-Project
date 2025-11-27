@@ -40,6 +40,6 @@ Swimlane for Delete news:
 Swimlane Diagram for Search_user:
 ![image alt](https://github.com/ttahsin124-wq/Database-Project/blob/e880eb12abb1a7c309912bdb173103720557ee78/(Swimlaine%20activity%20Diagram_Search%20for%20user).png)
 Swmilane Diagram for Search_news:
-![image alt](
+![image alt](https://github.com/ttahsin124-wq/Database-Project/blob/127ba5d43884daab8adac7dd41fd8fd46ff613e8/(Swimlaine%20activity%20Diagram_Search%20for%20news).png)
 
 
