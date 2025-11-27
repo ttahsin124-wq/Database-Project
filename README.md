@@ -22,3 +22,7 @@ It allows administrators to manage Users and News Articles, including creating, 
 **📊 ER Diagram (Entity–Relationship Diagram)**
 The following ER Diagram represents the database structure used in the News Blog Management System, showing the relationship between Users and News.
 ![image alt](https://github.com/ttahsin124-wq/Database-Project/blob/9b09fd453036e1fc37c850271594ad724f381251/ER%20Diagram.png)
+**🏊 Swimlane Activity Diagram**
+This diagram explains how the search functionality works across four layers:
+     User → UI → Backend → Database
+
