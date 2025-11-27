@@ -32,5 +32,7 @@ This diagram explains how the search functionality works across four layers:
 Swimlane diagram for edit user:
 ![image alt](https://github.com/ttahsin124-wq/Database-Project/blob/0e389216c4ce5c761e20dbedf61187f661248995/swimlane(Edit%20User).png)
 Swimlane diagram for edit news:
-![image alt](
+![image alt](https://github.com/ttahsin124-wq/Database-Project/blob/78ccd045857138ec2254c2f9820822d43eae3f2f/Swimlane(Edit%20news).png)
+Swimlane diagram for Delete user:
+
 
