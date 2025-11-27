@@ -25,9 +25,9 @@ The following ER Diagram represents the database structure used in the News Blog
 **🏊 Swimlane Activity Diagram**
 This diagram explains how the search functionality works across four layers:
      User → UI → Backend → Database
-     ADD news:
+ADD news:
      ![image alt](https://github.com/ttahsin124-wq/Database-Project/blob/7697838c127a6a277ba410118c72b9573d2d356f/Swmilane(Add%20news).png)
-     add user:
+add user:
      ![image alt](https://github.com/ttahsin124-wq/Database-Project/blob/762df2e5edefe9b0d0ec2fccfd9b08aa5222dc59/Swimlane(Add%20User).png)
 Swimlane diagram for edit user:
 ![image alt](https://github.com/ttahsin124-wq/Database-Project/blob/0e389216c4ce5c761e20dbedf61187f661248995/swimlane(Edit%20User).png)
