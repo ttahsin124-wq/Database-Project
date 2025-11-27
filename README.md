@@ -21,3 +21,4 @@ It allows administrators to manage Users and News Articles, including creating, 
 5.Clean architecture separated into UI, backend, and database logic
 **📊 ER Diagram (Entity–Relationship Diagram)**
 The following ER Diagram represents the database structure used in the News Blog Management System, showing the relationship between Users and News.
+![image alt](https://github.com/ttahsin124-wq/Database-Project/blob/9b09fd453036e1fc37c850271594ad724f381251/ER%20Diagram.png)
