@@ -12,7 +12,7 @@
 <br />
 
 <p align="center">
-  <b>Manage users, author posts, filter records, and track publications seamlessly with a modern dark interface.</b>
+  <b>Manage users, author posts, filter records  and track publications seamlessly with a modern dark interface.</b>
 </p>
 
 </div>
